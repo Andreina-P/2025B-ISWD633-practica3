@@ -46,9 +46,4 @@ docker rm -f nginx-bind
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-```
-docker run -d --name nginx-bind \
-  -p 8080:80 \
-  -v /mnt/c/Users/USER/Documents/nginx/html:/usr/share/nginx/html \
-  nginx:alpine
-```
+El servidor mantiene y muestra exactamente el mismo contenido del template sin necesidad de volver a copiar los archivos, ya que los datos se encuentran almacenados fuera del contenedor, en el directorio del host.
